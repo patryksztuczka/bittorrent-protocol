@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  client:
+    build:
+      context: ../services/client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../services/client:/app
+    environment:
+      - NODE_ENV=development
+
+  # project2:
+  #   build:
+  #     context: ../services/bun-project2
+  #   ports:
+  #     - "3001:3001"
+  #   volumes:
+  #     - ../services/bun-project2:/app
+  #   environment:
+  #     - NODE_ENV=development
